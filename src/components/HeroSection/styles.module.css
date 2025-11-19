@@ -5,7 +5,7 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: var(--color-primary-50);
+  background: rgb(255, 255, 255);
   overflow: hidden;
   padding: 6rem 0;
 }
