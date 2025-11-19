@@ -60,7 +60,7 @@
   right: 8%;
   width: 30px;
   height: 30px;
-  background: var(--color-accent-gold-light);
+  background: var(--color-primary-500);
   border-radius: 6px;
   animation: float 5s ease-in-out infinite 1s;
   opacity: 0.4;

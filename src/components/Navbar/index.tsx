@@ -1,27 +1,57 @@
 'use client';
 import React, { useState } from 'react';
+import { Menu, X, BookOpen } from 'lucide-react';
 import styles from './Navbar.module.css';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
+        
         {/* Logo */}
         <div className={styles.logo}>
-          <span className={styles.logoText}>Wendhy She Cat</span>
-          <span className={styles.logoSubtitle}>Livraria Virtual</span>
+          <BookOpen size={20} className={styles.logoIcon} />
+          <div className={styles.logoText}>
+            <span>Wendhy She Cat</span>
+            <span className={styles.logoSubtitle}>Livraria</span>
+          </div>
         </div>
 
         {/* Desktop Menu */}
         <div className={styles.menu}>
-          <a href="#inicio" className={styles.menuItem}>Início</a>
-          <a href="#livro" className={styles.menuItem}>O Livro</a>
-          <a href="#autora" className={styles.menuItem}>A Autora</a>
-          <a href="#evento" className={styles.menuItem}>Evento</a>
-          <button className={styles.reserveButton}>
-            Reservar Exemplar
+          <button 
+            onClick={() => scrollToSection('inicio')} 
+            className={styles.menuItem}
+          >
+            Início
+          </button>
+          <button 
+            onClick={() => scrollToSection('livro')} 
+            className={styles.menuItem}
+          >
+            O Livro
+          </button>
+          <button 
+            onClick={() => scrollToSection('autora')} 
+            className={styles.menuItem}
+          >
+            A Autora
+          </button>
+          <button 
+            onClick={() => scrollToSection('conversao')} 
+            className={styles.reserveButton}
+          >
+            Reservar
           </button>
         </div>
 
@@ -29,22 +59,39 @@ const Navbar: React.FC = () => {
         <button 
           className={styles.mobileToggle}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Menu"
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
         {/* Mobile Menu */}
         <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ''}`}>
-          <a href="#inicio" className={styles.mobileMenuItem}>Início</a>
-          <a href="#livro" className={styles.mobileMenuItem}>O Livro</a>
-          <a href="#autora" className={styles.mobileMenuItem}>A Autora</a>
-          <a href="#evento" className={styles.mobileMenuItem}>Evento</a>
-          <button className={styles.mobileReserveButton}>
+          <button 
+            onClick={() => scrollToSection('inicio')} 
+            className={styles.mobileMenuItem}
+          >
+            Início
+          </button>
+          <button 
+            onClick={() => scrollToSection('livro')} 
+            className={styles.mobileMenuItem}
+          >
+            O Livro
+          </button>
+          <button 
+            onClick={() => scrollToSection('autora')} 
+            className={styles.mobileMenuItem}
+          >
+            A Autora
+          </button>
+          <button 
+            onClick={() => scrollToSection('conversao')} 
+            className={styles.mobileReserveButton}
+          >
             Reservar Exemplar
           </button>
         </div>
+
       </div>
     </nav>
   );
