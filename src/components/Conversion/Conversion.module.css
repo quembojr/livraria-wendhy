@@ -1,0 +1,400 @@
+.conversion {
+  padding: 5rem 0;
+  background: var(--color-primary-50);
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-primary-100);
+  border: 1px solid var(--color-primary-200);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-primary-700);
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-neutral-900);
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--color-neutral-600);
+  max-width: 500px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+/* Content */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 4rem;
+  align-items: start;
+  margin-bottom: 4rem;
+}
+
+/* Benefits */
+.benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.benefitCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 2rem;
+  background: white;
+  border: 1px solid var(--color-primary-100);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.benefitCard:hover {
+  border-color: var(--color-primary-300);
+  transform: translateX(8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.benefitIcon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary-100);
+  border-radius: 10px;
+  color: var(--color-primary-600);
+  flex-shrink: 0;
+}
+
+.benefitIcon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.benefitContent h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-neutral-900);
+  margin-bottom: 0.5rem;
+}
+
+.benefitContent p {
+  color: var(--color-neutral-600);
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+/* Form Section */
+.formSection {
+  position: sticky;
+  top: 2rem;
+}
+
+.formCard {
+  background: white;
+  color: var(--color-neutral-900);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--color-primary-100);
+}
+
+/* Counter */
+.counter {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: var(--color-primary-50);
+  border: 1px solid var(--color-primary-100);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.counterNumber {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary-600);
+  display: block;
+  line-height: 1;
+}
+
+.counterLabel {
+  font-size: 0.875rem;
+  color: var(--color-primary-700);
+  font-weight: 500;
+}
+
+/* Pricing */
+.pricing {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.currency {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-neutral-700);
+}
+
+.amount {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-primary-600);
+  line-height: 1;
+}
+
+.decimal {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-primary-600);
+}
+
+.priceNote {
+  font-size: 0.875rem;
+  color: var(--color-neutral-600);
+  font-weight: 500;
+}
+
+/* Reservation Form */
+.reservationForm {
+  margin-bottom: 2rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 1rem;
+  color: var(--color-primary-500);
+  z-index: 2;
+}
+
+.formInput {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  border: 1px solid var(--color-primary-200);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  transition: all 0.3s ease;
+  color: var(--color-neutral-800);
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: var(--color-primary-500);
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
+}
+
+.formInput::placeholder {
+  color: var(--color-neutral-500);
+}
+
+/* Submit Button */
+.submitButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  padding: 1.25rem 2rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(168, 85, 247, 0.3);
+  margin-top: 1rem;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(168, 85, 247, 0.4);
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}
+
+/* Guarantees */
+.guarantees {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-primary-100);
+}
+
+.guarantee {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-neutral-600);
+  font-weight: 500;
+}
+
+.guarantee span:first-child {
+  color: var(--color-success);
+  font-weight: 700;
+}
+
+/* Urgency */
+.urgency {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--color-warning);
+  color: var(--color-neutral-900);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Testimonial */
+.testimonial {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid var(--color-primary-100);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.quote {
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: var(--color-neutral-700);
+  font-weight: 300;
+}
+
+.author {
+  font-weight: 600;
+  color: var(--color-primary-600);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .formSection {
+    position: static;
+    order: -1;
+  }
+
+  .benefitCard:hover {
+    transform: translateY(-4px);
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .conversion {
+    padding: 3rem 0;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+  }
+
+  .formCard {
+    padding: 2rem;
+  }
+
+  .amount {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .benefitCard {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .guarantees {
+    text-align: left;
+  }
+
+  .testimonial {
+    padding: 1.5rem;
+  }
+
+  .quote {
+    font-size: 1.125rem;
+  }
+
+  .inputIcon {
+    left: 0.75rem;
+  }
+
+  .formInput {
+    padding-left: 2.5rem;
+  }
+}

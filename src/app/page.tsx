@@ -3,6 +3,7 @@ import HeroSection from '@/components/HeroSection';
 import FeaturedSection from '@/components/FeaturedSection';
 import TheBook from '@/components/TheBook';
 import AboutAuthor from '@/components/AboutAuthor';
+import Conversion from '@/components/Conversion';
 
 
 const Home: React.FC = () => {
@@ -11,6 +12,7 @@ const Home: React.FC = () => {
       <HeroSection />
       <AboutAuthor />
       <TheBook />
+      <Conversion />
       {/* Outras sections serão adicionadas aqui */}
     </div>
   );
