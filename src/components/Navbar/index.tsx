@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
 
   const handleLogin = () => {
     // Aqui você pode implementar a lógica de login
-    router.push('/login');
+    router.push('#');
     console.log('Login clicked');
     // Redirecionar para página de login ou abrir modal
   };
