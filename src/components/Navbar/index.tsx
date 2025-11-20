@@ -1,10 +1,15 @@
 'use client';
 import React, { useState } from 'react';
-import { Menu, X, BookOpen } from 'lucide-react';
+import { Menu, X, BookOpen, User } from 'lucide-react';
 import styles from './Navbar.module.css';
+import { useRouter } from 'next/navigation';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  
+
+  const router = useRouter();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -12,6 +17,13 @@ const Navbar: React.FC = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
     setIsMenuOpen(false);
+  };
+
+  const handleLogin = () => {
+    // Aqui você pode implementar a lógica de login
+    router.push('/login');
+    console.log('Login clicked');
+    // Redirecionar para página de login ou abrir modal
   };
 
   return (
@@ -53,6 +65,13 @@ const Navbar: React.FC = () => {
           >
             Reservar
           </button>
+          <button 
+            onClick={handleLogin}
+            className={styles.loginButton}
+          >
+            <User size={16} />
+            <span>Entrar</span>
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -89,6 +108,13 @@ const Navbar: React.FC = () => {
             className={styles.mobileReserveButton}
           >
             Reservar Agora
+          </button>
+          <button 
+            onClick={handleLogin}
+            className={styles.mobileLoginButton}
+          >
+            <User size={16} />
+            <span>Entrar na Minha Conta</span>
           </button>
         </div>
 
