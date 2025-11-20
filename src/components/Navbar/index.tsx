@@ -88,7 +88,7 @@ const Navbar: React.FC = () => {
             onClick={() => scrollToSection('conversao')} 
             className={styles.mobileReserveButton}
           >
-            Reservar Exemplar
+            Reservar Agora
           </button>
         </div>
 

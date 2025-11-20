@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
               Reserve seu exemplar autografado com exclusividade.
             </p>
             <button className={styles.footerCtaButton}>
-              Garantir Meu Exemplar
+              Garantir o Meu
               <ArrowRight size={16} />
             </button>
           </div>

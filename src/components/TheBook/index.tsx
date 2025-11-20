@@ -96,7 +96,7 @@ const TheBook: React.FC = () => {
               <div className={styles.ctaButtonWrapper}>
                 <button className={styles.reserveButton}>
                   <BookOpen size={20} />
-                  Reservar Exemplar
+                  Reservar Agora
                 </button>
               </div>
 
