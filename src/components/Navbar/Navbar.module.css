@@ -209,6 +209,7 @@
 .mobileLoginButton {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
   background: none;
   border: 1px solid var(--color-primary-200);
