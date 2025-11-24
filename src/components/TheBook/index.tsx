@@ -21,10 +21,10 @@ const TheBook: React.FC = () => {
               <div className={styles.book}>
                 <div className={styles.bookCover}>
                   <div className={styles.coverContent}>
-                    <div className={styles.coverBadge}>Lançamento</div>
-                    <div className={styles.coverTitle}>Jornadas do Caos</div>
+                    {/* <div className={styles.coverBadge}>Lançamento</div> */}
+                    {/* <div className={styles.coverTitle}>Jornadas do Caos</div>
                     <div className={styles.coverSubtitle}>Asas de Luz e Sombra</div>
-                    <div className={styles.coverAuthor}>Wendhy She Cat</div>
+                    <div className={styles.coverAuthor}>Wendhy She Cat</div> */}
                   </div>
                 </div>
               </div>
