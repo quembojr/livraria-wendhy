@@ -295,7 +295,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url('/images/image.png'); /* SUA IMAGEM FRONTAL AQUI */
+  background-image: url('/images/cover.png'); /* SUA IMAGEM FRONTAL AQUI */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -325,7 +325,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url('/images/image.png'); /* SUA IMAGEM TRASEIRA AQUI */
+  background-image: url('/images/back.png'); /* SUA IMAGEM TRASEIRA AQUI */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

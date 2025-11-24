@@ -99,15 +99,17 @@
 .avatarCircle {
   width: 120px;
   height: 120px;
-  background: var(--gradient-primary);
+  background-image: url('/images/wendhy.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(168, 85, 247, 0.25);
+  border: 3px solid var(--color-primary-100);
   box-shadow: 0 8px 24px rgba(168, 85, 247, 0.2);
 }
 

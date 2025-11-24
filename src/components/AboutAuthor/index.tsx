@@ -6,9 +6,9 @@ const AboutAuthor: React.FC = () => {
   return (
     <section id="autora" className={styles.aboutAuthor}>
       <div className={styles.container}>
-        
+
         <div className={styles.content}>
-          
+
           {/* Lado Esquerdo - Conteúdo */}
           <div className={styles.textContent}>
             <div className={styles.header}>
@@ -18,10 +18,11 @@ const AboutAuthor: React.FC = () => {
 
             <div className={styles.description}>
               <p>
-                Com <strong>13 anos</strong>, Wendhy She Cat é uma jovem autora que está 
-                transformando a literatura com sua voz única e perspectiva fresca. 
-                Sua abordagem multidisciplinar cria obras que ressoam com leitores 
-                de todas as idades.
+                Nasceu aos 18 de Janeiro de 2012, na cidade de
+                Lichinga, Província de Niassa, Moçambique. Atualmente reside em
+                Lichinga. Aos <strong>13 anos</strong> demonstrou curiosidade e paixão pelo conhecimento. 
+                Muito cedo, começou a escrever o seu primeiro livro em prosa. 
+                É multifacetada, criando ilustrações de animes inspiradas pela sua própria imaginação.
               </p>
             </div>
 
@@ -45,7 +46,6 @@ const AboutAuthor: React.FC = () => {
           <div className={styles.visualContent}>
             <div className={styles.avatar}>
               <div className={styles.avatarCircle}>
-                <span>WS</span>
               </div>
               <div className={styles.ageBadge}>
                 <span>13 anos</span>
