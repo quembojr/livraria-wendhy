@@ -1,4 +1,4 @@
-/* styles.module.css - VERSÃO COMPLETA COM LIVRO 3D */
+/* styles.module.css - VERSÃO COM IMAGEM ÚNICA DOS DOIS LIVROS */
 
 .hero {
   position: relative;
@@ -68,15 +68,16 @@
 
 .container {
   position: relative;
-  max-width: 1200px;
+  max-width: 1200px; /* Aumentado para acomodar a imagem maior */
   width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 5rem;
-  align-items: center;
+  grid-template-columns: 1fr 1.2fr; /* Ajustado para dar mais espaço à imagem */
+  gap: 4rem;
+  /* align-items: center; */
   z-index: 2;
   padding: 0 2rem;
+  /* background-color: blue; */
 }
 
 .content {
@@ -90,7 +91,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   background: linear-gradient(135deg, var(--color-primary-100), var(--color-primary-50));
   padding: 0.875rem 1.75rem;
   border-radius: var(--border-radius-xl);
@@ -226,7 +227,7 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-  /* transition: left 0.7s; */
+  transition: left 0.7s;
 }
 
 .ctaButton:hover::before {
@@ -245,202 +246,62 @@
 /* Visual Section Aprimorada */
 .visualSection {
   position: relative;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   animation: slideInRight 0.8s ease-out 0.4s both;
 }
 
-.bookContainer {
+/* Container da Imagem dos Livros */
+.booksContainer {
   position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  /* background-color: red; */
   align-items: center;
-  perspective: 1400px;
-  gap: 2rem;
+  width: 90%;
+  max-width: 600px; /* Largura maior para a imagem retangular */
 }
 
-/* Container do Livro 3D */
-.book {
+.booksImageWrapper {
   position: relative;
-  width: 360px;
-  height: 440px;
-  transform-style: preserve-3d;
-  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-}
-
-.book.flipped {
-  transform: rotateY(-180deg);
-}
-
-/* Lados do Livro - Frente e Verso */
-.bookFront,
-.bookBack {
-  position: absolute;
   width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
-}
-
-.bookBack {
-  transform: rotateY(180deg);
-}
-
-/* Capa Frontal */
-.bookCoverFront {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url('/images/cover.png'); /* SUA IMAGEM FRONTAL AQUI */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 16px;
   box-shadow: 
-    var(--shadow-xl),
-    0 20px 40px rgba(168, 85, 247, 0.15),
+    var(--shadow-2xl),
+    0 25px 50px rgba(168, 85, 247, 0.2),
     0 0 0 1px rgba(255,255,255,0.1) inset;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 3px solid rgba(255,255,255,0.8);
-  transform: rotateY(-8deg) rotateX(8deg);
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.book:hover .bookCoverFront {
-  transform: rotateY(-12deg) rotateX(12deg) scale(1.08);
+.booksImageWrapper:hover {
+  transform: translateY(-5px) scale(1.02);
   box-shadow: 
-    var(--shadow-xl),
-    0 30px 60px rgba(168, 85, 247, 0.25),
-    0 0 0 1px rgba(255,255,255,0.2) inset;
+    var(--shadow-2xl),
+    0 35px 70px rgba(168, 85, 247, 0.3),
+    0 0 0 1px rgba(255,255,255,0.15) inset;
 }
 
-/* Capa Traseira */
-.bookCoverBack {
+.booksImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  transition: transform 0.5s ease;
+}
+
+.booksImageWrapper:hover .booksImage {
+  transform: scale(1.05);
+}
+
+/* Efeito de Brilho na Imagem */
+.booksGlow {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/images/back.png'); /* SUA IMAGEM TRASEIRA AQUI */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 16px;
-  box-shadow: 
-    var(--shadow-xl),
-    0 20px 40px rgba(168, 85, 247, 0.15),
-    0 0 0 1px rgba(255,255,255,0.1) inset;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 3px solid rgba(255,255,255,0.8);
-  transform: rotateY(8deg) rotateX(8deg);
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.book:hover .bookCoverBack {
-  transform: rotateY(12deg) rotateX(12deg) scale(1.08);
-  box-shadow: 
-    var(--shadow-xl),
-    0 30px 60px rgba(168, 85, 247, 0.25),
-    0 0 0 1px rgba(255,255,255,0.2) inset;
-}
-
-/* Conteúdo da Capa Frontal */
-.bookContent {
-  text-align: center;
-  color: white;
-  padding: 2rem;
-  position: relative;
-  z-index: 2;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-  background: rgba(0,0,0,0.3);
-  border-radius: 12px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
-}
-
-.bookStar {
-  color: var(--color-accent-gold);
-  margin-bottom: 1.5rem;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-  animation: twinkle 3s ease-in-out infinite;
-}
-
-.bookTitle {
-  font-family: var(--font-serif);
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.5px;
-}
-
-.bookSubtitle {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 500;
-  opacity: 0.95;
-  letter-spacing: 1px;
-}
-
-/* Conteúdo da Capa Traseira */
-.bookContentBack {
-  text-align: center;
-  color: white;
-  padding: 2rem;
-  position: relative;
-  z-index: 2;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
-  background: rgba(0,0,0,0.4);
-  border-radius: 12px;
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(255,255,255,0.3);
-  max-width: 80%;
-}
-
-.backTitle {
-  font-family: var(--font-serif);
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: var(--color-accent-gold);
-}
-
-.backDescription {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-  opacity: 0.9;
-  line-height: 1.5;
-}
-
-.backDetails {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.detailItem {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-.detailItem svg {
-  color: var(--color-accent-gold);
-  size: 14px;
-}
-
-/* Efeito de Brilho */
-.bookGlow {
-  position: absolute;
-  width: 120%;
-  height: 120%;
   background: radial-gradient(circle at center, 
     rgba(168, 85, 247, 0.15) 0%, 
     rgba(212, 175, 55, 0.1) 30%, 
@@ -448,35 +309,11 @@
   border-radius: 20px;
   opacity: 0;
   transition: opacity 0.5s ease;
-  top: -10%;
-  left: -10%;
+  pointer-events: none;
 }
 
-.book:hover .bookGlow {
+.booksImageWrapper:hover .booksGlow {
   opacity: 1;
-}
-
-/* Botão de Virar */
-.flipButton {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--color-primary-100);
-  border: 1.5px solid var(--color-primary-200);
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--border-radius-lg);
-  color: var(--color-primary-700);
-  font-weight: 600;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: var(--shadow-sm);
-}
-
-.flipButton:hover {
-  background: var(--color-primary-200);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
 }
 
 /* Elementos Flutuantes Aprimorados */
@@ -489,8 +326,8 @@
 
 .floatingStar {
   position: absolute;
-  top: 15%;
-  right: 5%;
+  top: 10%;
+  right: 10%;
   color: var(--color-accent-gold);
   animation: float 4s ease-in-out infinite, spin 8s linear infinite;
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
@@ -498,16 +335,16 @@
 
 .floatingAward {
   position: absolute;
-  bottom: 25%;
-  left: 5%;
+  bottom: 20%;
+  left: 8%;
   color: var(--color-primary-400);
   animation: float 5s ease-in-out infinite reverse 1s, bounce 3s ease-in-out infinite;
 }
 
 .floatingHeart {
   position: absolute;
-  top: 60%;
-  right: 15%;
+  top: 65%;
+  right: 12%;
   color: var(--color-primary-300);
   animation: float 6s ease-in-out infinite 0.5s, pulse 2s ease-in-out infinite;
 }
@@ -605,23 +442,13 @@
   }
 }
 
-@keyframes twinkle {
-  0%, 100% { 
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-  }
-  50% { 
-    opacity: 0.7;
-    transform: scale(1.1) rotate(180deg);
-  }
-}
-
 /* Responsive Design */
 @media (max-width: 968px) {
   .container {
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 3rem;
     text-align: center;
+    max-width: 1200px;
   }
   
   .titleMain {
@@ -632,13 +459,8 @@
     order: -1;
   }
   
-  .book {
-    width: 300px;
-    height: 370px;
-  }
-
-  .floatingElements {
-    display: block;
+  .booksContainer {
+    max-width: 600px;
   }
 
   .highlightItem:hover {
@@ -649,12 +471,19 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 6rem 1rem;
+    padding: 4rem 1rem;
     min-height: 100vh;
   }
 
   .container {
     padding: 0 1rem;
+    gap: 2.5rem;
+  }
+
+  .visualSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .titleMain {
@@ -670,21 +499,8 @@
     font-size: 1.125rem;
   }
   
-  .book {
-    width: 280px;
-    height: 340px;
-  }
-
-  .bookTitle {
-    font-size: 2rem;
-  }
-
-  .bookSubtitle {
-    font-size: 1.25rem;
-  }
-
-  .backTitle {
-    font-size: 1.5rem;
+  .booksContainer {
+    max-width: 500px;
   }
 }
 
@@ -705,9 +521,8 @@
     font-size: 0.8rem;
   }
 
-  .book {
-    width: 250px;
-    height: 300px;
+  .booksContainer {
+    max-width: 400px;
   }
 
   .ctaButton {
@@ -722,18 +537,4 @@
   .highlightItem {
     font-size: 0.9rem;
   }
-
-  .bookContent,
-  .bookContentBack {
-    padding: 1.5rem;
-  }
-
-  .bookTitle {
-    font-size: 1.75rem;
-  }
-
-  .bookSubtitle {
-    font-size: 1.125rem;
-  }
 }
-

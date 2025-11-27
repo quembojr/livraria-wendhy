@@ -1,15 +1,9 @@
 'use client';
 import React, { useState } from 'react';
-import { Star, Calendar, BookOpen, Award, ArrowDown, RotateCcw } from 'lucide-react';
+import { Star, Calendar, BookOpen, Award, ArrowDown } from 'lucide-react';
 import styles from './styles.module.css';
 
 const HeroSection: React.FC = () => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
-  const handleFlip = () => {
-    setIsFlipped(!isFlipped);
-  };
-
   return (
     <section className={styles.hero}>
       {/* Formas Decorativas Minimalistas */}
@@ -66,50 +60,16 @@ const HeroSection: React.FC = () => {
 
         {/* Lado do Livro com Elementos Visuais */}
         <div className={styles.visualSection}>
-          {/* Book Container */}
-          <div className={styles.bookContainer}>
-            <div className={`${styles.book} ${isFlipped ? styles.flipped : ''}`}>
-              {/* Frente do Livro */}
-              <div className={styles.bookFront}>
-                <div className={styles.bookCoverFront}>
-                  <div className={styles.bookContent}>
-                    <Star className={styles.bookStar} />
-                    <div className={styles.bookTitle}>Wendhy</div>
-                    <div className={styles.bookSubtitle}>She Cat</div>
-                  </div>
-                </div>
-                <div className={styles.bookGlow}></div>
-              </div>
-
-              {/* Verso do Livro */}
-              <div className={styles.bookBack}>
-                <div className={styles.bookCoverBack}>
-                  <div className={styles.bookContentBack}>
-                    <div className={styles.backTitle}>Edição Especial</div>
-                    <div className={styles.backDescription}>
-                      Lançamento Exclusivo
-                    </div>
-                    <div className={styles.backDetails}>
-                      <div className={styles.detailItem}>
-                        <Star size={16} />
-                        <span>Capadura Premium</span>
-                      </div>
-                      <div className={styles.detailItem}>
-                        <Award size={16} />
-                        <span>Assinado pela Autora</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className={styles.bookGlow}></div>
-              </div>
+          {/* Container da Imagem dos Dois Livros */}
+          <div className={styles.booksContainer}>
+            <div className={styles.booksImageWrapper}>
+              <img 
+                src="/images/capa.png" 
+                alt="Livro Wendhy She Cat - Frente e Verso"
+                className={styles.booksImage}
+              />
+              <div className={styles.booksGlow}></div>
             </div>
-
-            {/* Botão de Virar */}
-            <button className={styles.flipButton} onClick={handleFlip}>
-              <RotateCcw size={18} />
-              <span>{isFlipped ? 'Ver Frente' : 'Ver Verso'}</span>
-            </button>
           </div>
 
           {/* Elementos Flutuantes */}
