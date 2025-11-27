@@ -70,14 +70,14 @@ const TheBook: React.FC = () => {
                 <div className={styles.specItem}>
                   <Bookmark size={18} className={styles.specIcon} />
                   <div>
-                    <span className={styles.specValue}>256 páginas</span>
+                    <span className={styles.specValue}>160 páginas</span>
                     <span className={styles.specLabel}>Conteúdo</span>
                   </div>
                 </div>
                 <div className={styles.specItem}>
                   <Clock size={18} className={styles.specIcon} />
                   <div>
-                    <span className={styles.specValue}>18 capítulos</span>
+                    <span className={styles.specValue}>45 capítulos</span>
                     <span className={styles.specLabel}>Estrutura</span>
                   </div>
                 </div>
@@ -103,7 +103,7 @@ const TheBook: React.FC = () => {
 
               <div className={styles.ctaNote}>
                 <Clock size={14} />
-                <span>Entrega em 5-7 dias úteis</span>
+                <span>Entrega em 7-15 dias úteis dentro do pais</span>
               </div>
             </div>
 
