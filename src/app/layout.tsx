@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 
 
 export const metadata: Metadata = {
-  title: "Livraria Wendhy",
+  title: "Livraria Whendy",
   description: "A melhor livraria online para todos os amantes de livros.",
 };
 

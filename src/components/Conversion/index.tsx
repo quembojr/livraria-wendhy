@@ -79,7 +79,7 @@ const Conversion: React.FC = () => {
               <div className={styles.benefitIcon}><Star /></div>
               <div className={styles.benefitContent}>
                 <h3>Exemplar Autografado</h3>
-                <p>Assinatura personalizada da Wendhy She Cat</p>
+                <p>Assinatura personalizada da Whendy She Cat</p>
               </div>
             </div>
 

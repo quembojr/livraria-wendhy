@@ -13,7 +13,7 @@ const AboutAuthor: React.FC = () => {
           <div className={styles.textContent}>
             <div className={styles.header}>
               <span className={styles.label}>A Autora</span>
-              <h2 className={styles.title}>Wendhy She Cat</h2>
+              <h2 className={styles.title}>Whendy She Cat</h2>
             </div>
 
             <div className={styles.description}>

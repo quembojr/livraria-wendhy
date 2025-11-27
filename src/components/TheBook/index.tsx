@@ -24,7 +24,7 @@ const TheBook: React.FC = () => {
                     {/* <div className={styles.coverBadge}>Lançamento</div> */}
                     {/* <div className={styles.coverTitle}>Jornadas do Caos</div>
                     <div className={styles.coverSubtitle}>Asas de Luz e Sombra</div>
-                    <div className={styles.coverAuthor}>Wendhy She Cat</div> */}
+                    <div className={styles.coverAuthor}>Whendy She Cat</div> */}
                   </div>
                 </div>
               </div>
@@ -56,7 +56,7 @@ const TheBook: React.FC = () => {
             <div className={styles.description}>
               <p>
                 Uma obra profunda que explora as dualidades humanas através
-                de narrativas poéticas e reflexivas. <strong>Wendhy She Cat</strong> conduz
+                de narrativas poéticas e reflexivas. <strong>Whendy She Cat</strong> conduz
                 o leitor em uma jornada entre luz e sombra, caos e ordem,
                 revelando as complexidades da alma humana.
               </p>

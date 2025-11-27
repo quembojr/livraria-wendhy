@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
         <div className={styles.logo}>
           <BookOpen size={20} className={styles.logoIcon} />
           <div className={styles.logoText}>
-            <span>Wendhy She Cat</span>
+            <span>Whendy She Cat</span>
             <span className={styles.logoSubtitle}>Livraria</span>
           </div>
         </div>

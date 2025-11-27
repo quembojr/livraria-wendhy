@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
           {/* Brand Section */}
           <div className={styles.brandSection}>
             <div className={styles.logo}>
-              <span className={styles.logoText}>Wendhy She Cat</span>
+              <span className={styles.logoText}>Whendy She Cat</span>
               <span className={styles.logoSubtitle}>Livraria Virtual</span>
             </div>
             <p className={styles.brandDescription}>
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
             <div className={styles.contactInfo}>
               {/* <div className={styles.contactItem}>
                 <Mail size={18} className={styles.contactIcon} />
-                <span>contato@wendhyshecat.com</span>
+                <span>contato@whendyshecat.com</span>
               </div> */}
               <div className={styles.contactItem}>
                 <Phone size={18} className={styles.contactIcon} />
@@ -85,7 +85,7 @@ const Footer: React.FC = () => {
         {/* Footer Bottom */}
         <div className={styles.footerBottom}>
           <div className={styles.copyright}>
-            © 2025 Wendhy She Cat Livraria Virtual. Todos os direitos reservados.
+            © 2025 Whendy She Cat Livraria Virtual. Todos os direitos reservados.
           </div>
           <div className={styles.legalLinks}>
             <a href="#privacidade" className={styles.legalLink}>Política de Privacidade</a>

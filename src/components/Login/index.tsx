@@ -43,7 +43,7 @@ const Login: React.FC<LoginProps> = ({ onClose, onSwitchToRegister }) => {
         <div className={styles.header}>
           <div className={styles.logo}>
             <BookOpen size={24} className={styles.logoIcon} />
-            <span className={styles.logoText}>Wendhy She Cat</span>
+            <span className={styles.logoText}>Whendy She Cat</span>
           </div>
           <button onClick={onClose} className={styles.closeButton}>
             <X size={20} />

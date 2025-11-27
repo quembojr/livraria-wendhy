@@ -24,12 +24,12 @@ const HeroSection: React.FC = () => {
 
           {/* Título Principal */}
           <h1 className={styles.title}>
-            <span className={styles.titleMain}>Wendhy She Cat</span>
+            <span className={styles.titleMain}>Whendy She Cat</span>
           </h1>
 
           {/* Descrição Curta */}
           <p className={styles.description}>
-            Talentosa, inspiradora, única. Wendhy She Cat apresenta sua
+            Talentosa, inspiradora, única. Whendy She Cat apresenta sua
             <strong> primeira obra literária</strong> em um evento inesquecível.
           </p>
 
@@ -65,7 +65,7 @@ const HeroSection: React.FC = () => {
             <div className={styles.booksImageWrapper}>
               <img 
                 src="/images/capa.png" 
-                alt="Livro Wendhy She Cat - Frente e Verso"
+                alt="Livro Whendy She Cat - Frente e Verso"
                 className={styles.booksImage}
               />
               <div className={styles.booksGlow}></div>
