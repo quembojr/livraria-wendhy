@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  
+
 
   const router = useRouter();
 
@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
-        
+
         {/* Logo */}
         <div className={styles.logo}>
           <BookOpen size={20} className={styles.logoIcon} />
@@ -41,31 +41,37 @@ const Navbar: React.FC = () => {
 
         {/* Desktop Menu */}
         <div className={styles.menu}>
-          <button 
-            onClick={() => scrollToSection('inicio')} 
+          <button
+            onClick={() => scrollToSection('inicio')}
             className={styles.menuItem}
           >
             Início
           </button>
-          <button 
-            onClick={() => scrollToSection('livro')} 
+          <button
+            onClick={() => scrollToSection('livro')}
             className={styles.menuItem}
           >
             O Livro
           </button>
-          <button 
-            onClick={() => scrollToSection('autora')} 
+          <button
+            onClick={() => scrollToSection('autora')}
             className={styles.menuItem}
           >
             A Autora
           </button>
-          <button 
-            onClick={() => scrollToSection('conversao')} 
+          {/* <button
+            onClick={() => scrollToSection('conversao')}
+            className={styles.reserveButton}
+          >
+            Reservar
+          </button> */}
+          <button
+            onClick={() => window.open("https://wa.me/258858118089?text=Quero%20reservar%20o%20meu%20agora!", "_blank")}
             className={styles.reserveButton}
           >
             Reservar
           </button>
-          <button 
+          <button
             onClick={handleLogin}
             className={styles.loginButton}
           >
@@ -75,7 +81,7 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className={styles.mobileToggle}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Menu"
@@ -85,31 +91,40 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu */}
         <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ''}`}>
-          <button 
-            onClick={() => scrollToSection('inicio')} 
+          <button
+            onClick={() => scrollToSection('inicio')}
             className={styles.mobileMenuItem}
           >
             Início
           </button>
-          <button 
-            onClick={() => scrollToSection('livro')} 
+          <button
+            onClick={() => scrollToSection('livro')}
             className={styles.mobileMenuItem}
           >
             O Livro
           </button>
-          <button 
-            onClick={() => scrollToSection('autora')} 
+          <button
+            onClick={() => scrollToSection('autora')}
             className={styles.mobileMenuItem}
           >
             A Autora
           </button>
-          <button 
-            onClick={() => scrollToSection('conversao')} 
+
+          <button
+            onClick={() => window.open("https://wa.me/258858118089?text=Quero%20reservar%20o%20meu%20agora!", "_blank")}
+
             className={styles.mobileReserveButton}
           >
             Reservar Agora
           </button>
-          <button 
+          {/* <button 
+
+            onClick={() => scrollToSection('conversao')} 
+            className={styles.mobileReserveButton}
+          >
+            Reservar Agora
+          </button> */}
+          <button
             onClick={handleLogin}
             className={styles.mobileLoginButton}
           >

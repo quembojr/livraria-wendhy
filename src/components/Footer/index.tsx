@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { Mail, Phone, MapPin, Instagram, Facebook, Twitter, ArrowRight } from 'lucide-react';
 import styles from './Footer.module.css';
@@ -75,7 +76,7 @@ const Footer: React.FC = () => {
             <p className={styles.ctaText}>
               Reserve seu exemplar autografado com exclusividade.
             </p>
-            <button className={styles.footerCtaButton}>
+            <button className={styles.footerCtaButton} onClick={() => window.open("https://wa.me/258858118089?text=Quero%20reservar%20o%20meu%20agora!", "_blank")}>
               Garantir o Meu
               <ArrowRight size={16} />
             </button>

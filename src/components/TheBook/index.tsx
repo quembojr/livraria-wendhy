@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { BookOpen, Star, Feather, Award, Clock, Bookmark } from 'lucide-react';
 import styles from './styles.module.css';
@@ -94,7 +95,9 @@ const TheBook: React.FC = () => {
             {/* Call-to-Action Aprimorado */}
             <div className={styles.ctaSection}>
               <div className={styles.ctaButtonWrapper}>
-                <button className={styles.reserveButton}>
+                <button className={styles.reserveButton}              
+                 onClick={() => window.open("https://wa.me/258858118089?text=Quero%20reservar%20o%20meu%20agora!", "_blank")}
+>
                   <BookOpen size={20} />
                   Reservar Agora
                 </button>

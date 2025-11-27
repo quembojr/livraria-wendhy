@@ -51,7 +51,10 @@ const HeroSection: React.FC = () => {
 
           {/* CTA Principal */}
           <div className={styles.ctaSection}>
-            <button className={styles.ctaButton}>
+            <button
+              className={styles.ctaButton}
+              onClick={() => window.open("https://wa.me/258858118089?text=Quero%20reservar%20o%20meu%20agora!", "_blank")}
+            >
               <BookOpen size={20} />
               <span>Reservar Agora</span>
             </button>
@@ -63,8 +66,8 @@ const HeroSection: React.FC = () => {
           {/* Container da Imagem dos Dois Livros */}
           <div className={styles.booksContainer}>
             <div className={styles.booksImageWrapper}>
-              <img 
-                src="/images/capa.png" 
+              <img
+                src="/images/capa.png"
                 alt="Livro Whendy She Cat - Frente e Verso"
                 className={styles.booksImage}
               />
