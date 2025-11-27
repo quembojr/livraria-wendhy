@@ -54,13 +54,13 @@ const Footer: React.FC = () => {
           <div className={styles.contactSection}>
             <h4 className={styles.linksTitle}>Contato</h4>
             <div className={styles.contactInfo}>
-              <div className={styles.contactItem}>
+              {/* <div className={styles.contactItem}>
                 <Mail size={18} className={styles.contactIcon} />
                 <span>contato@wendhyshecat.com</span>
-              </div>
+              </div> */}
               <div className={styles.contactItem}>
                 <Phone size={18} className={styles.contactIcon} />
-                <span>+258 84 028 6033</span>
+                <span>+258 84 062 5356</span>
               </div>
               <div className={styles.contactItem}>
                 <MapPin size={18} className={styles.contactIcon} />

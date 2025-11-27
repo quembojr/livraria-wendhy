@@ -72,7 +72,7 @@
   width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1.2fr; /* Ajustado para dar mais espaço à imagem */
+  grid-template-columns: 1fr 1fr; /* Ajustado para dar mais espaço à imagem */
   gap: 4rem;
   /* align-items: center; */
   z-index: 2;
