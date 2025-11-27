@@ -96,7 +96,7 @@ const TheBook: React.FC = () => {
             <div className={styles.ctaSection}>
               <div className={styles.ctaButtonWrapper}>
                 <button className={styles.reserveButton}              
-                 onClick={() => window.open("https://wa.me/258858118089?text=Quero%20reservar%20o%20meu%20agora!", "_blank")}
+                 onClick={() => window.open("https://wa.me/258858118089?text=Quero%20reservar%20o%20meu%20livro%20agora!", "_blank")}
 >
                   <BookOpen size={20} />
                   Reservar Agora

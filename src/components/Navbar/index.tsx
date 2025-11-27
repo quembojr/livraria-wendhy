@@ -66,7 +66,7 @@ const Navbar: React.FC = () => {
             Reservar
           </button> */}
           <button
-            onClick={() => window.open("https://wa.me/258858118089?text=Quero%20reservar%20o%20meu%20agora!", "_blank")}
+            onClick={() => window.open("https://wa.me/258858118089?text=Quero%20reservar%20o%20meu%20livro%20agora!", "_blank")}
             className={styles.reserveButton}
           >
             Reservar
@@ -111,7 +111,7 @@ const Navbar: React.FC = () => {
           </button>
 
           <button
-            onClick={() => window.open("https://wa.me/258858118089?text=Quero%20reservar%20o%20meu%20agora!", "_blank")}
+            onClick={() => window.open("https://wa.me/258858118089?text=Quero%20reservar%20o%20meu%20livro%20agora!", "_blank")}
 
             className={styles.mobileReserveButton}
           >

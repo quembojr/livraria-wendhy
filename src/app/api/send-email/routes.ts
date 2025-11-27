@@ -1,45 +1,37 @@
 import nodemailer from "nodemailer";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(req: { json: () => any; }) {
-    try {
-        const body = await req.json();
-        const { nome, email, telefone } = body;
+export async function POST(req: NextRequest) {
+  try {
+    const { nome, email, telefone } = await req.json();
 
-        if (!nome || !email || !telefone) {
-            return new Response(JSON.stringify({ error: "Campos incompletos" }), {
-                status: 400
-            });
-        }
-
-        // Transporter (USA GMAIL ou OUTRO)
-        const transporter = nodemailer.createTransport({
-            service: "gmail",
-            auth: {
-                user: process.env.EMAIL_USER,   // teu email
-                pass: process.env.EMAIL_PASS,   // tua senha app
-            }
-        });
-
-        // Conteúdo do email
-        await transporter.sendMail({
-            from: `"Formulário de Reserva" <${process.env.EMAIL_USER}>`,
-            to: process.env.SEND_TO, // email que vai receber
-            subject: "Nova Reserva de Livro",
-            text: `
-                Nova reserva recebida:
-                Nome: ${nome}
-                Email: ${email}
-                Telefone: ${telefone}
-                Data: ${new Date().toLocaleDateString()}    
-      `
-        });
-
-        return new Response(JSON.stringify({ ok: true }), { status: 200 });
-
-    } catch (error) {
-        console.error("Erro ao enviar email:", error);
-        return new Response(JSON.stringify({ error: "Erro interno" }), {
-            status: 500
-        });
+    if (!nome || !email || !telefone) {
+      return NextResponse.json({ error: "Campos incompletos" }, { status: 400 });
     }
+
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
+      }
+    });
+
+    await transporter.sendMail({
+      from: `"Reserva Livro" <${process.env.EMAIL_USER}>`,
+      to: process.env.SEND_TO,
+      subject: "Nova Reserva",
+            text: `Nova reserva recebida:
+        Nome: ${nome}
+        Email: ${email}
+        Telefone: ${telefone}
+        Data: ${new Date().toLocaleString()}`
+            });
+
+    return NextResponse.json({ ok: true });
+
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json({ error: "Erro interno" }, { status: 500 });
+  }
 }

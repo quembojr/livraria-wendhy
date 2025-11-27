@@ -10,7 +10,7 @@ const Conversion: React.FC = () => {
     telefone: '',
   });
 
-  const scriptURL = "https://script.google.com/macros/s/AKfycbzfiJ3qSpHKwEPwhpfGAITT_XuYglTT2KjylGuL9x-b8HeKo_4u6k2drxl52_R5GBql/exec";
+  const scriptURL = "https://script.google.com/macros/s/AKfycbyRH-rvj8Ji0v9PUZd0EmlUW_Whi6a0wrur5PRtRyCaFOLa7lAmWJLyYwG_BRt527iU/exec";
 
  const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
