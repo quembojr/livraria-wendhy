@@ -154,7 +154,7 @@
 
 /* Pricing */
 .pricing {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
@@ -179,16 +179,52 @@
   line-height: 1;
 }
 
-.decimal {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--color-primary-600);
+.priceComparison {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
-.priceNote {
-  font-size: 0.875rem;
-  color: var(--color-neutral-600);
+.originalPrice {
+  color: var(--color-neutral-500);
+  font-size: 0.9rem;
   font-weight: 500;
+}
+
+.discountNote {
+  color: var(--color-success);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* Launch Info */
+.launchInfo {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: var(--color-primary-50);
+  border: 1px solid var(--color-primary-200);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.launchBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-primary-600);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.launchText {
+  font-size: 0.9rem;
+  color: var(--color-primary-700);
+  font-weight: 600;
+  margin: 0;
 }
 
 /* Reservation Form */
@@ -294,12 +330,13 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 1rem;
-  background: var(--color-warning);
-  color: var(--color-neutral-900);
+  background: var(--color-warning-light, #fef3c7);
+  color: var(--color-warning-dark, #92400e);
   border-radius: 8px;
   font-size: 0.875rem;
   font-weight: 600;
   text-align: center;
+  border: 1px solid var(--color-warning, #f59e0b);
 }
 
 /* Testimonial */
@@ -396,5 +433,14 @@
 
   .formInput {
     padding-left: 2.5rem;
+  }
+
+  .priceComparison {
+    align-items: center;
+  }
+
+  .launchBadge {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
   }
 }
